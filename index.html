@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact DetCity FC</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://www.detcityfc.com/wp-content/themes/detcityfc/images/hero.jpg');
+            background-size: cover;
+            background-position: center;
+            min-height: 100vh;
+            color: #fff;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 40px auto;
+            background: rgba(255,255,255,0.95);
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            overflow: hidden;
+        }
+
+        header {
+            background: #003366;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            color: #fff;
+            font-size: 2.2rem;
+            margin-bottom: 8px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        header p {
+            color: #e6e6e6;
+            font-size: 1.1rem;
+            max-width: 80%;
+            margin: 0 auto;
+        }
+
+        .form-content {
+            padding: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #003366;
+        }
+
+        input[type="text"], input[type="email"] {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 16px;
+            transition: all 0.3s;
+        }
+
+        input[type="text"]:focus, input[type="email"]:focus {
+            border-color: #003366;
+            box-shadow: 0 0 0 2px rgba(0,51,102,0.2);
+            outline: none;
+        }
+
+        input[type="submit"] {
+            background: #003366;
+            color: white;
+            border: none;
+            padding: 14px 25px;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.3s;
+            font-weight: 600;
+        }
+
+        input[type="submit"]:hover {
+            background: #002244;
+            transform: translateY(-2px);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            font-size: 0.9rem;
+            background: #f8f9fa;
+        }
+
+        @media (max-width: 600px) {
+            .form-content {
+                padding: 20px;
+            }
+            
+            header h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Connect With DetCity FC</h1>
+            <p>Join our community and help grow soccer in Detroit</p>
+        </header>
+        
+        <div class="form-content">
+            <form action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DO200000AjTXx" method="POST">
+                <input type="hidden" name="oid" value="00DO200000AjTXx">
+                <input type="hidden" name="retURL" value="https://www.detcityfc.com/">
+                
+                <div class="form-group">
+                    <label for="first_name">First Name</label>
+                    <input id="first_name" maxlength="40" name="first_name" type="text" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="last_name">Last Name</label>
+                    <input id="last_name" maxlength="80" name="last_name" type="text" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input id="email" maxlength="80" name="email" type="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="company">Company</label>
+                    <input id="company" maxlength="40" name="company" type="text">
+                </div>
+                
+                <div class="form-group">
+                    <label for="city">City</label>
+                    <input id="city" maxlength="40" name="city" type="text" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="state">State/Province</label>
+                    <input id="state" maxlength="20" name="state" type="text" required>
+                </div>
+                
+                <input type="submit" name="submit" value="Submit Inquiry">
+            </form>
+        </div>
+        
+        <div class="footer">
+            <p>© 2025 DetCity FC. All rights reserved. | Your local soccer community partner</p>
+        </div>
+    </div>
+</body>
+</html>
