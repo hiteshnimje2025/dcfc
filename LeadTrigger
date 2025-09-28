@@ -40,6 +40,9 @@ trigger LeadTrigger on Lead (before insert, before update, after insert, after u
                     if (Trigger.isInsert) {
                         LeadRoundRobinHandler.handleQueueAssignments(Trigger.new, null, true);
                     } else if (Trigger.isUpdate) {
+                         // Let's only run this logic on insert, not updates. This will address the issue
+                        // we are seeing with the Web-to-Lead updates causing multiple reassignments.
+                        // 
                         LeadRoundRobinHandler.handleQueueAssignments(Trigger.new, Trigger.oldMap, false);
                     }
         } catch (Exception e) {
